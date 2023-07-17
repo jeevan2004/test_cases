@@ -30,7 +30,7 @@ expect :- This is the condition that the test needs to pass. It compares the rec
 
 shallow:- This renders only the individual components that we are testing. It does not render child components. This enables us to test components in isolation.
 
-it("renders without crashing", () => {
+{it("renders without crashing", () => {
 shallow(<App />);
 });
 
@@ -38,7 +38,7 @@ it("renders Account header", () => {
 const wrapper = shallow(<App />);
 const welcome = <h1>Display Active Users Account Details</h1>;
 expect(wrapper.contains(welcome)).toEqual(true);
-});
+});}
 
 Old Version (using builder)
 
@@ -73,7 +73,7 @@ super(props);
 render() {
 return (
 
-            <Box sx={webStyle.inputStyle}>
+            <Box>
               <InputLabel id="service-shop-name">
                 This is the reviced value:{this.state.txtSavedValue}
               </InputLabel>
